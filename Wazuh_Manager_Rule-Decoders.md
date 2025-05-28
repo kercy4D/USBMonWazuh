@@ -46,3 +46,5 @@ usbmon: 2025-05-24 04:58:29  Drive: E:  Name:   FileSystem:   SizeStorage : 0,00
 After doing all that, we will restart the service manager.
 `sudo systemctl restart wazuh-manager`
 Now we can go on wazuh Dashboard for alerts display.
+
+![wazuh-logtest](wazuh-logtest.png)
