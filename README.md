@@ -4,3 +4,10 @@ You can extend the Yara rules as you see fit. For those who don’t have them, I
 
 # Acknowledgments
  would like to thank the great WAZUH team and community, who are passionate champions of powerful open-source software. I will continue to develop my skills in order to contribute even more to the advancement of this fantastic security tool.
+
+# Dashboard Results
+
+![usb device content](usb_device.png)
+![into directory](wazuhdemo1.png)
+![wazuhdemo](wazuhdemo2.png)
+![wazuhdemo](wazuhdemo3.png)
