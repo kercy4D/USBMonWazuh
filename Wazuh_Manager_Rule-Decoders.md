@@ -21,6 +21,6 @@ usbmon: 2025-05-20 16:46:58  Drive: E:  Name: KTCC  FileSystem: FAT32  SizeStora
 ```
 We save, then run the test with wazuh-logtest.
 `/var/ossec/bin/wazuh-logtest`
-and we paste le logtest> 'usbmon: 2025-05-20 16:46:58  Drive: E:  Name: KTCC  FileSystem: FAT32  SizeStorage : 7,44 GB  Model : SanDisk Cruzer Blade USB Device threatDetected :  E:\Crackme.exe E:\zombie.txt'
+and we paste le logtest> `usbmon: 2025-05-20 16:46:58  Drive: E:  Name: KTCC  FileSystem: FAT32  SizeStorage : 7,44 GB  Model : SanDisk Cruzer Blade USB Device threatDetected :  E:\Crackme.exe E:\zombie.txt`
 ![[Pasted image 20250519110735.png]]
 
