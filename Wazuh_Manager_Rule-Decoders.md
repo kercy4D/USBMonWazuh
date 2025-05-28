@@ -21,6 +21,28 @@ usbmon: 2025-05-20 16:46:58  Drive: E:  Name: KTCC  FileSystem: FAT32  SizeStora
 ```
 We save, then run the test with wazuh-logtest.
 `/var/ossec/bin/wazuh-logtest`
-and we paste le logtest> `usbmon: 2025-05-20 16:46:58  Drive: E:  Name: KTCC  FileSystem: FAT32  SizeStorage : 7,44 GB  Model : SanDisk Cruzer Blade USB Device threatDetected :  E:\Crackme.exe E:\zombie.txt`
-![[Pasted image 20250519110735.png]]
+and we paste the logtest> `usbmon: 2025-05-20 16:46:58  Drive: E:  Name: KTCC  FileSystem: FAT32  SizeStorage : 7,44 GB  Model : SanDisk Cruzer Blade USB Device threatDetected :  E:\Crackme.exe E:\zombie.txt`
 
+Now let's go to initialise the corresponding Rule
+
+### Rule initialisation
+We will open the local file for the custom rules and then paste the following rule.
+
+`sudo nano /var/ossec/etc/rules/local_rules.xml`
+
+```xml
+<!-- logtest:
+usbmon: 2025-05-24 04:58:29  Drive: E:  Name:   FileSystem:   SizeStorage : 0,00 GB  Model : SanDisk Cruzer Blade USB Device threatDetected :  E:\Crackme.exe E:\zombie.txt
+-->
+
+<group name="usbmon_rule,">
+    <rule id="100080" level="6">
+     <decoded_as>usbmon</decoded_as>
+    <field name="usbmon.drive">(\w\p)</field>
+    <description>USB device has detected: $(usbmon.drive) </description>
+    </rule>
+</group>
+```
+After doing all that, we will restart the service manager.
+`sudo systemctl restart wazuh-manager`
+Now we can go on wazuh Dashboard for alerts display.
