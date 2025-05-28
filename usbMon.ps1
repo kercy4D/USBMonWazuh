@@ -1,3 +1,14 @@
+#################################################################################
+#  Author       : TCHUISSEU Cyriaque @Kercy4D 
+#  Date         : 2025-05-20
+#  Project      : USB Device Detection and Response 
+#  Description  : This script is build as a proof-of-concept for detecting and responding device USB connection to unauthorized USB device connections using Wazuh capabilities.
+#  Dedicace     : Dedicated to the Wazuh Team.Thank you for your commitment to open-source security.
+#  OS           : Windows 10
+#  GitHub       : https://github.com/kercy4D/USBMonWazuh/ 
+#  Version      : 1.0.2
+#  Linkedin     : https://www.linkedin.com/in/cyriaque-t-ab710a221
+#################################################################################
 #Initialisation of yara
 $yaraRule ="C:\\Program Files (x86)\\ossec-agent\\active-response\\bin\\yara\\rules\\yara_rules.yar"
 $yara_exe ="C:\\Program Files (x86)\\ossec-agent\active-response\\bin\\yara\\yara64.exe"
